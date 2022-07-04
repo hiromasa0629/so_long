@@ -6,7 +6,7 @@
 #    By: hyap <hyap@student.42kl.edu.my>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/29 13:05:02 by hyap              #+#    #+#              #
-#    Updated: 2022/07/01 13:22:41 by hyap             ###   ########.fr        #
+#    Updated: 2022/07/04 14:47:02 by hyap             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ LIBFTPRINTF = libftprintf.a
 
 FSANITIZE = -fsanitize=address 
 
-NAME = main
+NAME = so_long
 
 RM = rm -f
 
@@ -34,6 +34,9 @@ all:
 	${CC} ${CFLAGS} -I includes ${SRCS} ${LIBMLX} ${LIBFTPRINTF} -o ${NAME}
 
 clean:
+	${RM} ${NAME}
+
+fclean:
 	${RM} ${NAME}
 
 run:

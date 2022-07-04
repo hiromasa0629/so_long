@@ -6,7 +6,7 @@
 /*   By: hyap <hyap@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 19:44:21 by hyap              #+#    #+#             */
-/*   Updated: 2022/07/04 14:36:31 by hyap             ###   ########.fr       */
+/*   Updated: 2022/07/04 14:57:41 by hyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	main(int ac, char **av)
 		exit_error("Map path!");
 	init_game(&game, av[1]);
 	mlx_key_hook(game.mlx.win, key_hook, &game);
+	mlx_hook(game.mlx.win, 17, 0L, exit_hook, &game);
 	mlx_loop(game.mlx.mlx);
 	return (0);
 }

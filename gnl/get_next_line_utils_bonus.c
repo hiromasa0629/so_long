@@ -76,3 +76,18 @@ char	*ft_strjoin(char *save, char *buf)
 	free(save);
 	return (join);
 }
+
+int	check_last_line(char *s)
+{
+	int	i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i])
+	{
+		if (s[i++] == '\n')
+			return (0);
+	}
+	return (1);
+}

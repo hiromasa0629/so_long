@@ -6,7 +6,7 @@
 /*   By: hyap <hyap@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 20:49:26 by hyap              #+#    #+#             */
-/*   Updated: 2022/07/04 14:37:40 by hyap             ###   ########.fr       */
+/*   Updated: 2022/07/07 14:40:24 by hyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,14 @@ void	exit_error(char *s)
 
 int	is_obstacles(char c)
 {
-	if (c == '1' || c == 'E')
+	if (c == '1')
+		return (1);
+	return (0);
+}
+
+int	is_tent(char c)
+{
+	if (c == 'E')
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: hyap <hyap@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:43:17 by hyap              #+#    #+#             */
-/*   Updated: 2022/07/04 14:26:06 by hyap             ###   ########.fr       */
+/*   Updated: 2022/07/08 14:12:24 by hyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	check_wall_error(t_game *game)
 	int		index;
 	char	*line;
 
-	i = 0;
 	index = 0;
 	while (game->map.map[index])
 	{
+		i = 0;
 		line = game->map.map[index];
-		if (index == 0 || index == game->map.x)
+		if (index == 0 || index == game->map.y - 1)
 			while (line[i])
 				if (line[i++] != '1')
 					exit_error("Wall Error!");

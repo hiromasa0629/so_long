@@ -12,7 +12,7 @@
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
-# define BUFFER_SIZE 100
+# define BUFFER_SIZE 42
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -23,5 +23,6 @@ int		check_nl(char *s, char c);
 char	*ft_strdup(char *s);
 char	*ft_strjoin(char *save, char *buf);
 int		get_next_line(int fd, char **line);
+int		check_last_line(char *s);
 
 #endif

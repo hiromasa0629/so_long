@@ -6,13 +6,9 @@
 #    By: hyap <hyap@student.42kl.edu.my>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/29 13:05:02 by hyap              #+#    #+#              #
-#    Updated: 2022/07/04 14:47:02 by hyap             ###   ########.fr        #
+#    Updated: 2022/07/07 13:43:07 by hyap             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-SERVER = server.c
-
-CLIENT = client.c
 
 SRCS = ${wildcard srcs/*.c} ${wildcard gnl/*.c}
 
@@ -30,7 +26,9 @@ NAME = so_long
 
 RM = rm -f
 
-all:
+all: ${NAME}
+
+${NAME}: ${SRCS}
 	${CC} ${CFLAGS} -I includes ${SRCS} ${LIBMLX} ${LIBFTPRINTF} -o ${NAME}
 
 clean:
@@ -38,9 +36,6 @@ clean:
 
 fclean:
 	${RM} ${NAME}
-
-run:
-	./${NAME}
 
 re: clean all
 

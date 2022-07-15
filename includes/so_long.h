@@ -6,7 +6,7 @@
 /*   By: hyap <hyap@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 19:47:42 by hyap              #+#    #+#             */
-/*   Updated: 2022/07/09 12:27:28 by hyap             ###   ########.fr       */
+/*   Updated: 2022/07/15 11:34:22 by hyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ typedef struct s_player {
 
 typedef struct s_game {
 	t_mlx		mlx;
-	//t_img		img;
 	t_img		wall;
 	t_img		ground;
 	t_img		player_up;
